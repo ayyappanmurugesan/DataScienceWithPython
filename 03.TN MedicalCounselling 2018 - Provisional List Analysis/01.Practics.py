@@ -16,80 +16,80 @@ import numpy as np
 tneet=pd.read_csv("process.csv")
 
 #Print Full Data
-print(tneet)
+#print(tneet)
 
 #Get the number of records detail
-print(tneet.index)
+#print(tneet.index)
 
 #Get the available column in the record
-print(tneet.columns)
+#print(tneet.columns)
 
 #Print Top 5 Record
-print(tneet.head())
+#print(tneet.head())
 
-print("\n\n")
+#print("\n\n")
 
 #Print Top 10 Records
-print(tneet.head(2))
+#print(tneet.head(2))
 
-print("\n\n")
+#print("\n\n")
 
 #Set specific column as Index Column
 tneet=tneet.set_index("RANK")
-print(tneet.head())
+#print(tneet.head())
 
 #Accessing specific Field Data Set
 name=tneet['NAME']
-print(name)
+#print(name)
 
-print("\n\n");
+#print("\n\n");
 
 subset=tneet[['NAME','MARK']]
-print(subset)            
+#print(subset)            
 
-print("\n\n");
+#print("\n\n");
 
 subset=tneet.loc[[1,10]]
-print(subset)
+#print(subset)
 
 
-print("\n\n");
+#print("\n\n");
 
 subset=tneet.iloc[[0,9]]
-print(subset)
+#print(subset)
 
-print("\n\n");
+#print("\n\n");
 
 subset=tneet.loc[:5]
-print(subset)
+#print(subset)
 
-print("\n\n");
+#print("\n\n");
 
 subset=tneet.iloc[:5]
-print(subset)
+#print(subset)
 
-print("\n\n");
+#print("\n\n");
 
 subset=tneet.loc[:2,['NAME','MARK']]
-print(subset)
+#print(subset)
 
-print("\n\n");
+#print("\n\n");
 
 subset=tneet.iloc[:2,[1,3]]
-print(subset)
+#print(subset)
 
-print("\n\n");
+#print("\n\n");
 
 #Remove Last Col
 del tneet['EMPTY']
-print(tneet)
+#print(tneet)
 
 
 #Change type of the MARK Field
-print(type(tneet["MARK"][1]))
+#print(type(tneet["MARK"][1]))
 
 
-print("\n\n");
+#print("\n\n");
 
 oc=tneet[tneet.COMMUNITY=='OC']
 bc=tneet[tneet.COMMUNITY=='BC']

@@ -12,8 +12,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 tneet=pd.read_csv("process.csv")
 def cutOff(allocation):
-    govtGQ=2445
-    selfGQ=783
+    govtGQ=3350
+    selfGQ=1600
     rajGQ=127
     bdsGQ=85
     bdsSelfGQ=1020
@@ -45,8 +45,8 @@ def cutOff(allocation):
     plt.xticks([])
     plt.show()    
 
-cutOff({'OC': 31,'BC': 26.5,'BCM': 3.5,
-        'MBC/DNC': 20,'SC': 16,'SCA': 2,'ST': 1
+cutOff({'OC': 7,'BC': 44.5,'BCM': 4.5,
+        'MBC/DNC': 21,'SC': 18.5,'SCA': 2.5,'ST': 2
 })
 
     

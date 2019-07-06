@@ -22,8 +22,8 @@ seatallot=[]
 rseat=[]
 parti=[]
 
-govtGQ=2445
-selfGQ=783
+govtGQ=3350
+selfGQ=1600
 rajGQ=127
 bdsGQ=85
 bdsSelfGQ=1020

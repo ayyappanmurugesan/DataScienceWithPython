@@ -18,15 +18,19 @@ tneet=pd.read_csv("process.csv")
 categories=['OC','BC','BCM','MBC/DNC','SC','SCA','ST']
 lowrange=[]
 highrange=[]
+avgrange=[]
 for category in categories:
     markgroup=tneet[tneet.COMMUNITY==category]
     low=min(markgroup.MARK)
     high=max(markgroup.MARK)
+    avg=(low+high)/2
     lowrange.append(low)
     highrange.append(high)
+    avgrange.append(avg)
 
 plt.plot(categories,lowrange)
 plt.plot(categories,highrange)
+plt.plot(categories,avgrange)
 plt.title('Mark Range - Low & High');
 plt.xlabel('Community')
 plt.ylabel('Mark')

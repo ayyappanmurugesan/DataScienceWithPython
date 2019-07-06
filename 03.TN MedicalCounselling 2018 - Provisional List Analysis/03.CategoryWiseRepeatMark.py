@@ -19,13 +19,14 @@ tneet=pd.read_csv("process.csv")
 
 
 def repeatMarks(category,groups,start,stop):
+    
     rgroups=groups.loc[start:stop]
     if len(rgroups)>0:
         plt.bar(rgroups.index,rgroups.values)
         plt.title("{3}-Repeating Marks (Range: {0} to {1}) - Total: {2}".format(start,stop,np.sum(rgroups.values),category))
         plt.xlabel('Mark (min: {0},max: {1})'.format(min(rgroups.index),max(rgroups.index)))
         plt.ylabel('Number of Candidates')
-        plt.savefig('report/categoryRepeatMark/{0}-{1}-{2}.png'.format(category.replace("/","-"),start,stop))
+        #plt.savefig('report/categoryRepeatMark/{0}-{1}-{2}.png'.format(category.replace("/","-"),start,stop))
         plt.show()
         
         

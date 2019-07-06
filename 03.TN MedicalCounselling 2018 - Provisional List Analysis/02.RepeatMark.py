@@ -19,12 +19,15 @@ tneet=pd.read_csv("process.csv")
 
 
 def repeatMarks(groups,start,stop):
-    rgroups=groups.loc[start:stop]
-    plt.bar(rgroups.index,rgroups.values)
-    plt.title("Repeating Marks (Range: {0} to {1}) - Total: {2}".format(start,stop,np.sum(rgroups.values)))
-    plt.xlabel('Mark (min: {0},max: {1})'.format(min(rgroups.index),max(rgroups.index)))
-    plt.ylabel('Number of Candidates')
-    plt.show()
+    try:
+        rgroups=groups.loc[start:stop]
+        plt.bar(rgroups.index,rgroups.values)
+        plt.title("Repeating Marks (Range: {0} to {1}) - Total: {2}".format(start,stop,np.sum(rgroups.values)))
+        plt.xlabel('Mark (min: {0},max: {1})'.format(min(rgroups.index),max(rgroups.index)))
+        plt.ylabel('Number of Candidates')
+        plt.show()
+    except:
+        print("No range in ",start,stop)
 
 markgroup=tneet.groupby(['MARK'])
 groups=markgroup.size()

@@ -40,8 +40,8 @@ im = ax.imshow(cateData)
 ax.set_xticks(np.arange(len(categories)))
 ax.set_yticks(np.arange(len(ranges)))
 # ... and label them with the respective list entries
-ax.set_xticklabels(categories)
-ax.set_yticklabels(ranges)
+ax.set_xticklabels(ranges)
+ax.set_yticklabels(categories)
 
 # Rotate the tick labels and set their alignment.
 plt.setp(ax.get_xticklabels(), rotation=49, ha="right",
